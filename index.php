@@ -1,3 +1,34 @@
+<?php
+
+/**
+ * Sert à générer une classe de couleur CSS en fonction des valeurs des deux paramétres i et j.
+ */
+function colorClass(int $i, int $j): string
+{
+    if ($i == 1 || $j == 1) {
+        return "firstRowCol";
+    } elseif ($i % 2 == 0) {
+        return "pair";
+    } else {
+        return "impair";
+    }
+}
+
+/**
+ * Sert à générer une class CSS font-weight en fonction des valeurs des deux paramétres i et j.
+ */
+function fontWeightClass(int $i, int $j): string
+{
+    if ($i == 1 || $j == 1 || $i == $j) {
+        return "bold";
+    } else {
+        return "";
+    }
+}
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,7 +46,7 @@
             <?php for ($i = 1; $i <= 9; $i++) : ?>
                 <tr>
                     <?php for ($j = 1; $j <= 9; $j++) : ?>
-                        <td>
+                        <td class="<?= colorClass($i, $j) . " " . fontWeightClass($i, $j) ?>">
                             <?= $i * $j == 1 ? "&nbsp;" : $i * $j ?>
                         </td>
                     <?php endfor ?>
