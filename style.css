@@ -1,0 +1,42 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+main {
+    text-align: center;
+}
+
+table, tr, td {
+    border: 1px solid black;
+}
+
+table {
+    border-collapse: collapse;
+    width: 600px;
+}
+
+td {
+    padding: 10px;
+}
+
+.firstRowCol {
+    background-color: #c6a9a3 ;
+}
+
+.pair {
+    background-color: #ebd8b7;
+}
+
+.impair {
+    background-color: #99bbad;
+}
+
+.bold {
+    font-weight: bold;
+}

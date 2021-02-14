@@ -26,7 +26,6 @@ function fontWeightClass(int $i, int $j): string
     }
 }
 
-
 ?>
 
 <!DOCTYPE html>
@@ -37,11 +36,12 @@ function fontWeightClass(int $i, int $j): string
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tableau de multiplication</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <main>
-        <h2>Tableau de multiplication</h2>
+        <h1>Tableau de multiplication</h1>
         <table>
             <?php for ($i = 1; $i <= 9; $i++) : ?>
                 <tr>
@@ -54,6 +54,10 @@ function fontWeightClass(int $i, int $j): string
             <?php endfor ?>
         </table>
     </main>
+
+    <footer>
+        <p>&copy; Copyright &middot; Mokrane RACHEDI &middot; UMMTO</p>
+    </footer>
 </body>
 
 </html>
